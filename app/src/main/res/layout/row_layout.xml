@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:stretchColumns="*">
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:weightSum="3">
+
+        <TextView
+            android:id="@+id/tvmovieElementName"
+            android:layout_width="0dp"
+            android:layout_marginLeft="1dp"
+            android:layout_marginBottom="1dp"
+            android:layout_weight="1"
+            android:background="@drawable/element_textview"
+            android:gravity="center"
+            android:text="Movie"
+            android:elevation="5dp"/>
+
+        <TextView
+            android:id="@+id/tvmovieelementLang"
+            android:layout_width="0dp"
+            android:layout_marginLeft="1dp"
+            android:layout_marginBottom="1dp"
+            android:layout_weight="1"
+            android:background="@drawable/element_textview"
+            android:gravity="center"
+            android:text="Language"
+            android:elevation="5dp"/>
+
+        <TextView
+            android:id="@+id/tvmovieElementGenre"
+            android:layout_width="0dp"
+            android:layout_marginLeft="1dp"
+            android:layout_marginBottom="1dp"
+            android:layout_weight="1"
+            android:background="@drawable/element_textview"
+            android:gravity="center"
+            android:text="Genre"
+            android:elevation="5dp"/>
+
+    </TableRow>
+
+</TableLayout>

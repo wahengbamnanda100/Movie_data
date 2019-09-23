@@ -1,14 +1,105 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".movieInput">
 
-    <!-- TODO: Update blank fragment layout -->
     <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:id="@+id/tvmovieDetailHeader"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Enter Movie Details"
+        android:textSize="24sp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp"
+        android:padding="8dp"/>
 
-</FrameLayout>
+    <TextView
+        android:id="@+id/tvmoviename"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Enter Movie Name"
+        android:layout_below="@id/tvmovieDetailHeader"
+        android:layout_marginTop="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:padding="8dp"/>
+
+    <EditText
+        android:id="@+id/etmoviename"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvmoviename"
+        android:layout_marginTop="8dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginLeft="16dp"
+        android:padding="8dp"/>
+
+    <TextView
+        android:id="@+id/tvmovielang"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Movie Language"
+        android:layout_below="@id/etmoviename"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="8dp"
+        android:padding="8dp" />
+
+    <EditText
+        android:id="@+id/etmovielang"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvmovielang"
+        android:layout_marginTop="8dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginLeft="16dp"
+        android:padding="8dp"/>
+
+    <TextView
+        android:id="@+id/tvmoviegenre"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Movie Genre"
+        android:layout_below="@id/etmovielang"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="8dp"
+        android:padding="8dp" />
+
+    <EditText
+        android:id="@+id/etmoviegenre"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvmoviegenre"
+        android:layout_marginTop="8dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginLeft="16dp"
+        android:padding="8dp"/>
+
+    <Button
+        android:id="@+id/btclear"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Clear"
+        android:textAllCaps="false"
+        android:layout_below="@id/etmoviegenre"
+        android:layout_marginLeft="48dp"
+        android:layout_marginTop="32dp"
+        android:paddingLeft="48dp"
+        android:paddingRight="48dp"/>
+
+    <Button
+        android:id="@+id/btsend"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Send"
+        android:textAllCaps="false"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/etmoviegenre"
+        android:layout_marginRight="48dp"
+        android:layout_marginTop="32dp"
+        android:paddingLeft="48dp"
+        android:paddingRight="48dp"/>
+</RelativeLayout>

@@ -1,14 +1,82 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".movieDisply">
 
-    <!-- TODO: Update blank fragment layout -->
     <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:id="@+id/movieheader"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp"
+        android:text="Movies Details"
+        android:textSize="24sp" />
 
-</FrameLayout>
+    <TableLayout
+        android:id="@+id/movietable"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/movieheader"
+        android:layout_margin="16dp"
+        android:background="#555151"
+        android:stretchColumns="*">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:weightSum="3">
+
+            <TextView
+                android:id="@+id/tvmovieDetailname"
+                android:layout_width="0dp"
+                android:layout_marginLeft="1dp"
+                android:layout_marginTop="1dp"
+                android:layout_marginBottom="1dp"
+                android:layout_weight="1"
+                android:background="@drawable/textview_style"
+                android:gravity="center"
+                android:text="Movie"
+                android:textColor="#ffff"
+                android:elevation="5dp"/>
+
+            <TextView
+                android:id="@+id/tvmovieDetailLang"
+                android:layout_width="0dp"
+                android:layout_marginLeft="1dp"
+                android:layout_marginTop="1dp"
+                android:layout_marginBottom="1dp"
+                android:layout_weight="1"
+                android:background="@drawable/textview_style"
+                android:gravity="center"
+                android:text="Language"
+                android:textColor="#ffff"
+                android:elevation="5dp"/>
+
+            <TextView
+                android:id="@+id/tvmovieDetailGenre"
+                android:layout_width="0dp"
+                android:layout_marginLeft="1dp"
+                android:layout_marginTop="1dp"
+                android:layout_marginBottom="1dp"
+                android:layout_marginRight="1dp"
+                android:layout_weight="1"
+                android:background="@drawable/textview_style"
+                android:gravity="center"
+                android:text="Genre"
+                android:textColor="#ffff"
+                android:elevation="5dp"/>
+
+        </TableRow>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/tableRecyclerVIew"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </TableLayout>
+
+
+
+</RelativeLayout>
