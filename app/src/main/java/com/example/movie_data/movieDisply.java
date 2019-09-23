@@ -55,7 +55,7 @@ public class movieDisply extends Fragment {
                 null,
                 null,
                 null,
-                MovieContract.MovieEntry.COLUMN_TIMESTAMP + "DESC"
+                null
         );
     }
 
