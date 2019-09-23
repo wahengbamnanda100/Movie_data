@@ -1,14 +1,96 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".movieDisply">
 
-    <!-- TODO: Update blank fragment layout -->
     <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:id="@+id/tvsignup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Sign Up"
+        android:textSize="24dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginLeft="16dp"/>
 
-</FrameLayout>
+    <TextView
+        android:id="@+id/tvname"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_below="@id/tvsignup"
+        android:text="Username"
+        android:padding="8dp"
+        android:layout_marginRight="16dp"/>
+
+    <EditText
+        android:id="@+id/etname"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginLeft="16dp"
+        android:padding="8dp"
+        android:layout_below="@id/tvname"
+        android:hint="Enter Username"
+        android:layout_marginRight="16dp"/>
+
+    <TextView
+        android:id="@+id/tvemail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/etname"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="8dp"
+        android:padding="8dp"
+        android:text="Email"
+        android:layout_marginRight="16dp"/>
+
+    <EditText
+        android:id="@+id/etemail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginLeft="16dp"
+        android:padding="8dp"
+        android:layout_below="@id/tvemail"
+        android:hint="Enter Email"
+        android:layout_marginRight="16dp"/>
+
+    <TextView
+        android:id="@+id/tvpassword"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/etemail"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="8dp"
+        android:padding="8dp"
+        android:text="Password"
+        android:layout_marginRight="16dp"/>
+
+    <EditText
+        android:id="@+id/etpassword"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginLeft="16dp"
+        android:padding="8dp"
+        android:layout_below="@id/tvpassword"
+        android:hint="Enter Password"
+        android:layout_marginRight="16dp"/>
+
+    <Button
+        android:id="@+id/btsubmit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Submit"
+        android:textAllCaps="false"
+        android:layout_below="@id/etpassword"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="16dp"
+        android:paddingRight="16dp"
+        android:paddingLeft="16dp"
+        android:layout_marginTop="16dp"/>
+
+</RelativeLayout>
