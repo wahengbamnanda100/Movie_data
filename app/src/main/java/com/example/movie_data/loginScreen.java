@@ -8,12 +8,15 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 
 
 /**
  * A simple {@link Fragment} subclass.
  */
-public class loginScreen extends Fragment {
+public class loginScreen extends Fragment implements View.OnClickListener {
+
+    Button btsignup;
 
 
     public loginScreen() {
@@ -25,7 +28,18 @@ public class loginScreen extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_login_screen, container, false);
+        View view = inflater.inflate(R.layout.fragment_login_screen, container, false);
+
+        btsignup = view.findViewById(R.id.btsubmit);
+        btsignup.setOnClickListener(this);
+
+        return view;
     }
 
+    @Override
+    public void onClick(View view) {
+        getFragmentManager().beginTransaction().replace(R.id.fragment_container,
+                new movieInput()).commit();
+
+    }
 }
