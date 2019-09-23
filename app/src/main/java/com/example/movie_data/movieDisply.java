@@ -59,4 +59,5 @@ public class movieDisply extends Fragment {
         );
     }
 
+
 }

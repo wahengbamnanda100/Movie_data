@@ -23,7 +23,7 @@ public class movieInput extends Fragment implements View.OnClickListener {
     private SQLiteDatabase database;
 
     EditText etmoviename, etlanguage, etgenre;
-    Button btinsert, btclear;
+    Button btinsert, btclear, btshow;
 
 
     public movieInput() {
@@ -47,9 +47,11 @@ public class movieInput extends Fragment implements View.OnClickListener {
 
         btclear = view.findViewById(R.id.btclear);
         btinsert = view.findViewById(R.id.btsend);
+        btshow = view.findViewById(R.id.btshow);
 
         btinsert.setOnClickListener(this);
         btclear.setOnClickListener(this);
+        btshow.setOnClickListener(this);
 
         return view;
     }
@@ -64,8 +66,17 @@ public class movieInput extends Fragment implements View.OnClickListener {
             case R.id.btclear:
                 cleardata();
                 break;
+
+            case R.id.btshow:
+                show();
+                break;
         }
 
+    }
+
+    private void show() {
+        getFragmentManager().beginTransaction().replace(R.id.fragment_container,
+                new movieDisply()).commit();
     }
 
     private void cleardata() {

@@ -105,4 +105,16 @@
         android:layout_marginTop="32dp"
         android:paddingLeft="48dp"
         android:paddingRight="48dp"/>
+
+    <Button
+        android:id="@+id/btshow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Show details"
+        android:textAllCaps="false"
+        android:layout_centerInParent="true"
+        android:layout_below="@id/btsend"
+        android:layout_marginTop="32dp"
+        android:paddingLeft="48dp"
+        android:paddingRight="48dp"/>
 </RelativeLayout>
